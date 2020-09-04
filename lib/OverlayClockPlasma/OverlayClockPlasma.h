@@ -11,7 +11,7 @@ public:
     void renderFrame(tm localtime);
 private:
     uint16_t time;
-    byte shift;
+    uint16_t shift;
 };
 
 #endif

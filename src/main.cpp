@@ -11,7 +11,7 @@
 #include "TimeService.h"
 
 #define PIN D6
-#define NUM_LEDS 300
+#define NUM_LEDS 256
 
 const char *host = "ChaosUhrRelaoded"; // WLAN Name
 
@@ -60,6 +60,6 @@ void loop()
 {
     timeService.process();
     FastLED.clearData();
-    overlayClockPlasma.renderFrame(timeService.localtime);
+    overlayClockFire.renderFrame(timeService.localtime);
     FastLED.show();
 }

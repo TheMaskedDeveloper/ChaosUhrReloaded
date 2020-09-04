@@ -1,7 +1,7 @@
 #ifndef OverlayClock_h
 #define OverlayClock_h
-#define MATRIX_WIDTH 20
-#define MATRIX_HEIGHT 15
+#define MATRIX_WIDTH 32
+#define MATRIX_HEIGHT 8
 
 #include <FastLED.h>
 

@@ -7,6 +7,8 @@ OverlayClockNeo::OverlayClockNeo()
 {
     scaleBackground = 8;
     scaleTrail = 192;
+    scaleTrail = 150;
+
 };
 
 void OverlayClockNeo::renderFrame(tm localtime)
@@ -31,13 +33,13 @@ void OverlayClockNeo::renderFrame(tm localtime)
     if (random8(2) == 0)
     {
         int8_t spawnX = random8(MATRIX_WIDTH);
-        if (dotsPerColoumn[spawnX] < 4) {
+        if (dotsPerColoumn[spawnX] < 3) {
             pane[spawnX][0] = CRGB(175, 255, 175);
             dotsPerColoumn[spawnX] = dotsPerColoumn[spawnX] + 1;
         }
     }
     for (int8_t col = 0; col < MATRIX_WIDTH; col++)
-        if (dotsPerColoumn[col] < 2) {
+        if (dotsPerColoumn[col] < 1) {
             pane[col][0] = CRGB(175, 255, 175);
             dotsPerColoumn[col]++;
         }
